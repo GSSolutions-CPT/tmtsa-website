@@ -3,7 +3,7 @@ import { BentoCard, BentoGrid } from "@/components/ui/BentoGrid";
 import { DynamicHero } from "@/components/ui/DynamicHero";
 import { FAQ } from "@/components/ui/FAQ";
 import { ReviewsTicker } from "@/components/ui/ReviewsTicker";
-import { Droplets, Paintbrush, ShieldCheck, Wrench } from "lucide-react";
+import { Droplets, Paintbrush, ShieldCheck, Wrench, BadgeCheck, UserCheck } from "lucide-react";
 import Image from "next/image";
 import bentoIndustrial from "../../public/images/bento-industrial.png";
 import bentoResidential from "../../public/images/bento-residential-bright.png";
@@ -100,6 +100,74 @@ export default async function HomePage() {
             }
           />
         </BentoGrid>
+
+        {/* NEW: Why Choose Us Section */}
+        <div className="mt-32 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-neutral-50 p-8 rounded-2xl border border-neutral-100 flex flex-col items-center text-center hover:border-tmt-orange/30 transition-colors group">
+            <div className="w-16 h-16 bg-tmt-orange/10 rounded-full flex items-center justify-center mb-6 text-tmt-orange group-hover:bg-tmt-orange group-hover:text-white transition-colors">
+              <BadgeCheck className="w-8 h-8" />
+            </div>
+            <h4 className="font-heading font-bold text-xl mb-3">10-Year Guarantee</h4>
+            <p className="text-neutral-600">All our structural waterproofing and roof coating projects come with a fully comprehensive, insurance-backed warranty.</p>
+          </div>
+          <div className="bg-neutral-50 p-8 rounded-2xl border border-neutral-100 flex flex-col items-center text-center hover:border-tmt-orange/30 transition-colors group">
+            <div className="w-16 h-16 bg-tmt-orange/10 rounded-full flex items-center justify-center mb-6 text-tmt-orange group-hover:bg-tmt-orange group-hover:text-white transition-colors">
+              <Wrench className="w-8 h-8" />
+            </div>
+            <h4 className="font-heading font-bold text-xl mb-3">Master Craftsmen</h4>
+            <p className="text-neutral-600">Our teams are Sika and Abe approved applicators, trained to handle complex structural repairs and industrial coatings.</p>
+          </div>
+          <div className="bg-neutral-50 p-8 rounded-2xl border border-neutral-100 flex flex-col items-center text-center hover:border-tmt-orange/30 transition-colors group">
+            <div className="w-16 h-16 bg-tmt-orange/10 rounded-full flex items-center justify-center mb-6 text-tmt-orange group-hover:bg-tmt-orange group-hover:text-white transition-colors">
+              <UserCheck className="w-8 h-8" />
+            </div>
+            <h4 className="font-heading font-bold text-xl mb-3">Owner Supervised</h4>
+            <p className="text-neutral-600">Every project is personally overseen by our management team to ensure the highest standards of quality control.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: 3-Step Process Section */}
+      <section className="py-24 bg-neutral-900 text-white border-y border-white/10">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-20">
+            <h2 className="text-tmt-orange font-bold tracking-[0.2em] uppercase mb-4 text-xs">How We Work</h2>
+            <h3 className="font-heading text-4xl md:text-5xl font-black">Hassle-Free Restoration</h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative max-w-6xl mx-auto">
+            {/* Connector Line (Desktop) */}
+            <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-neutral-800 z-0"></div>
+
+            {/* Step 1 */}
+            <div className="relative z-10 flex flex-col items-center text-center group">
+              <div className="w-24 h-24 bg-neutral-800 border-4 border-neutral-900 rounded-full flex items-center justify-center mb-8 text-tmt-orange shadow-xl relative group-hover:scale-110 transition-transform duration-300">
+                <span className="text-3xl font-black">1</span>
+              </div>
+              <h4 className="font-heading font-bold text-2xl mb-4 group-hover:text-tmt-orange transition-colors">Request a Quote</h4>
+              <p className="text-neutral-400 leading-relaxed max-w-xs">Contact us via WhatsApp or details form. We&apos;ll respond within 2 hours to schedule a site visit.</p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="relative z-10 flex flex-col items-center text-center group">
+              <div className="w-24 h-24 bg-neutral-800 border-4 border-neutral-900 rounded-full flex items-center justify-center mb-8 text-tmt-orange shadow-xl group-hover:scale-110 transition-transform duration-300">
+                <span className="text-3xl font-black">2</span>
+              </div>
+              <h4 className="font-heading font-bold text-2xl mb-4 group-hover:text-tmt-orange transition-colors">Site Assessment</h4>
+              <p className="text-neutral-400 leading-relaxed max-w-xs">Our expert assesses the damage, identifies the root cause, and provides a detailed, itemized proposal.</p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="relative z-10 flex flex-col items-center text-center group">
+              <div className="w-24 h-24 bg-tmt-orange border-4 border-neutral-900 rounded-full flex items-center justify-center mb-8 text-black shadow-xl group-hover:scale-110 transition-transform duration-300">
+                <span className="text-3xl font-black">3</span>
+                <div className="absolute inset-0 border border-tmt-orange rounded-full animate-ping opacity-20"></div>
+              </div>
+              <h4 className="font-heading font-bold text-2xl mb-4 group-hover:text-tmt-orange transition-colors">Project Execution</h4>
+              <p className="text-neutral-400 leading-relaxed max-w-xs">Our team arrives on time, works efficiently, and leaves your property cleaner than we found it.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* 3. PROJECT SPOTLIGHT (Before/After) */}
