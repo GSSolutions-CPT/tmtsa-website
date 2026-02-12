@@ -86,6 +86,12 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
             <p>Airless spraying forces paint into the pores of the tiles, creating a stronger bond and a thicker film build than traditional rolling. The result is a finish that lasts 10+ years without peeling.</p>
         `,
         structuredData: {
+            commonSigns: [
+                { title: "Faded & Chalky Paint", description: "Roof color looking washed out or powdery to the touch (oxidation)." },
+                { title: "Moss & Algae Growth", description: "Green or black growth on tiles, common in leafy suburbs like Durbanville." },
+                { title: "Cracked Ridge Capping", description: "Cement between ridge tiles falling out, leading to leaks." },
+                { title: "Rusted Screws/Flashing", description: "Visible corrosion on metal fasteners or valley flashings." }
+            ],
             processSteps: [
                 { title: "High-Pressure Cleaning", description: "We strip away years of dirt, moss, and flaking paint using industrial 250-bar pressure washers." },
                 { title: "Fungicidal Wash", description: "We apply a chemical treatment to kill spore roots, preventing moss regrowth under the new paint." },
@@ -124,6 +130,12 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
             <p>In Blouberg's corrosive environment, a small crack allows salt air to reach your rebar quickly. Early intervention saves tens of thousands in future heavy construction costs. Call TMT for a specialized structural assessment.</p>
         `,
         structuredData: {
+            commonSigns: [
+                { title: "Spalling (Concrete Cancer)", description: "Chunks of concrete falling off, exposing rusted steel bars." },
+                { title: "Rust Stains", description: "Brown streaks running down walls from cracks." },
+                { title: "Structural Cracks", description: "Deep cracks in columns, beams, or balconies (mostly horizontal or vertical)." },
+                { title: "Hollow Sounding Concrete", description: "Areas that sound drummy or hollow when tapped." }
+            ],
             processSteps: [
                 { title: "Exposure & Assessment", description: "We mechanically remove damaged concrete to clearly expose the full extent of the corroded rebar." },
                 { title: "Rust Treatment", description: "Steel is cleaned to a bright finish and treated with zinc-rich primers to permanently halt corrosion." },
@@ -203,6 +215,11 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
             <p>Don't replace your roof if you don't have to. Our restoration process extends the life of your roof by 10-15 years.</p>
         `,
         structuredData: {
+            commonSigns: [
+                { title: "Faded Paint", description: "Dull, oxidized exterior walls or roof." },
+                { title: "Peeling & Flaking", description: "Paint lifting off the substrate." },
+                { title: "Mould on Interior", description: "Black spots due to poor ventilation or leaks." }
+            ],
             processSteps: [
                 { title: "High-Pressure Cleaning", description: "Removing all moss, lichen, and oxidation." },
                 { title: "Fungicidal Treatment", description: "Killing spores to prevent regrowth." },
@@ -299,6 +316,11 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
              <img src="/images/services/content-structural.png" alt="Structural Repairs" class="rounded-lg shadow-lg my-8 w-full block" />
         `,
         structuredData: {
+            commonSigns: [
+                { title: "Concrete Cancer", description: "Exploding concrete due to rusting steel." },
+                { title: "Step Cracks", description: "Diagonal cracking in brickwork indicating settlement." },
+                { title: "Rust Leaks", description: "Red/Brown stains leaching from walls." }
+            ],
             processSteps: [
                 { title: "Assess & Expose", description: "Exposing corroded rebar to determine the extent of damage." },
                 { title: "Treat & Prime", description: "Anti-corrosion treatment for steel and bonding primers for concrete." },

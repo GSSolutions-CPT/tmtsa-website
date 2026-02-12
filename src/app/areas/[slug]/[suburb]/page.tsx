@@ -2,6 +2,10 @@ import { ContentPage } from "@/components/templates/ContentPage";
 import { SITE_DATA } from "@/lib/siteData";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { db } from "@/db";
+import { projects } from "@/db/schema";
+import { ilike } from "drizzle-orm";
+import Image from "next/image";
 
 // Generate paths for all regions and their suburbs
 export async function generateStaticParams() {
@@ -65,6 +69,13 @@ export default async function SuburbPage({ params }: Props) {
 
     const heroImage = override?.heroImage || region.heroImage;
 
+    // Fetch projects for this area
+    const areaProjects = await db.query.projects.findMany({
+        where: ilike(projects.location, `%${suburbNameOriginal}%`),
+        limit: 3,
+        orderBy: (projects, { desc }) => [desc(projects.createdAt)],
+    });
+
     return (
         <ContentPage
             title={`Property Maintenance in ${suburbNameOriginal}`}
@@ -76,6 +87,37 @@ export default async function SuburbPage({ params }: Props) {
             serviceArea={{
                 locations: region.locations
             }}
-        />
+        >
+            {areaProjects.length > 0 && (
+                <div className="mt-12 pt-12 border-t border-neutral-100">
+                    <h3 className="text-2xl font-bold font-heading mb-6">Recent Work in {suburbNameOriginal}</h3>
+                    <div className="grid gap-6 md:grid-cols-2">
+                        {areaProjects.map((project) => (
+                            <div key={project.id} className="bg-white rounded-lg shadow-sm border border-neutral-100 overflow-hidden hover:shadow-md transition-shadow">
+                                <div className="aspect-video relative bg-neutral-100">
+                                    {project.afterImageUrl ? (
+                                        <Image
+                                            src={project.afterImageUrl}
+                                            alt={project.title}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    ) : (
+                                        <div className="flex items-center justify-center h-full text-neutral-400 text-sm">No Image</div>
+                                    )}
+                                </div>
+                                <div className="p-4">
+                                    <h4 className="font-bold text-lg mb-2 line-clamp-1">{project.title}</h4>
+                                    <p className="text-sm text-neutral-600 line-clamp-2 mb-4">{project.description}</p>
+                                    <span className="inline-block px-2 py-1 bg-neutral-100 text-neutral-600 text-xs rounded-md">
+                                        {project.location}
+                                    </span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+        </ContentPage>
     );
 }
