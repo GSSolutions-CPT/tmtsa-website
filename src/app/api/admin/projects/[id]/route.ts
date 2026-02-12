@@ -13,7 +13,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
 
         if (!project) return NextResponse.json({ error: 'Not found' }, { status: 404 });
         return NextResponse.json(project);
-    } catch (_error) {
+    } catch {
         return NextResponse.json({ error: 'Failed to fetch' }, { status: 500 });
     }
 }
@@ -24,7 +24,11 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
         const id = parseInt(resolvedParams.id);
         const body = await request.json();
 
-        const { id: _, createdAt: __, ...updateData } = body;
+
+
+        const updateData = { ...body };
+        delete updateData.id;
+        delete updateData.createdAt;
 
         await db.update(projects)
             .set(updateData)
@@ -46,7 +50,7 @@ export async function DELETE(
         const { id } = await params;
         await db.delete(projects).where(eq(projects.id, parseInt(id)));
         return NextResponse.json({ success: true });
-    } catch (_error) {
+    } catch {
         return NextResponse.json({ error: 'Failed to delete' }, { status: 500 });
     }
 }

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { LucideArrowLeft, LucideLoader2, LucideUpload, LucideSave, LucideTrash, ArrowLeft, Loader2, Upload, Save, Trash2 } from "lucide-react";
+import { ArrowLeft, Loader2, Upload, Save, Trash2 } from "lucide-react";
 import Link from 'next/link';
 
 // Using useParams from next/navigation for client components

@@ -5,6 +5,7 @@ export default function SchemaMarkup({
     data = {}
 }: {
     pageType?: 'WebSite' | 'LocalBusiness' | 'Service' | 'FAQPage';
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     data?: any;
 }) {
     const baseSchema = {
@@ -35,6 +36,7 @@ export default function SchemaMarkup({
         ]
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let finalSchema: any = { ...baseSchema };
 
     if (pageType === 'Service') {

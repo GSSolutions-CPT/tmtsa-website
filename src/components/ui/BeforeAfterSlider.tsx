@@ -63,8 +63,7 @@ export const BeforeAfterSlider = ({
                 alt={afterAlt}
                 fill
                 className="object-cover"
-                priority
-                quality={100}
+                quality={80}
                 sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-bold backdrop-blur-sm z-10">
@@ -83,8 +82,7 @@ export const BeforeAfterSlider = ({
                     alt={beforeAlt}
                     fill
                     className="object-cover"
-                    priority
-                    quality={100}
+                    quality={80}
                     sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute top-4 left-4 bg-tmt-orange/90 text-white px-3 py-1 rounded-full text-sm font-bold backdrop-blur-sm">

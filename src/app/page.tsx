@@ -58,9 +58,8 @@ export default async function HomePage() {
                 src={bentoIndustrial}
                 alt="Professional Industrial Waterproofing Services in Cape Town"
                 fill
-                className="object-cover opacity-80"
+                className="object-cover opacity-80 transparent"
                 sizes="(max-width: 768px) 100vw, 66vw"
-                priority
               />
             }
           />
@@ -109,9 +108,9 @@ export default async function HomePage() {
           <div className="flex flex-col md:flex-row gap-20 items-center">
 
             <div className="w-full md:w-1/2">
-              <div className="inline-flex items-center gap-3 text-black text-xs font-bold uppercase tracking-[0.2em] mb-8 border-l-2 border-black pl-4">
+              <h2 className="inline-flex items-center gap-3 text-black text-xs font-bold uppercase tracking-[0.2em] mb-8 border-l-2 border-black pl-4">
                 Project Spotlight
-              </div>
+              </h2>
               <h3 className="font-heading text-5xl md:text-7xl font-bold text-black mb-8 leading-[0.9]">
                 {latestProject ? latestProject.title.split(' ')[0] : 'Becott'} <br />
                 <span className="text-neutral-400 font-light">

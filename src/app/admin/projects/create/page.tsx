@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { LucideArrowLeft, LucideLoader2, LucideUpload, LucideSave, ArrowLeft, Loader2, Upload, Save } from "lucide-react";
+import { ArrowLeft, Loader2, Upload, Save } from "lucide-react";
 import Link from 'next/link';
 
 export default function CreateProject() {

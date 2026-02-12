@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import NextImage from "next/image";
 import { useEffect, useState } from "react";
+import heroImage from "../../../public/images/hero-executive-white-gold.png";
 
 const ROTATING_TEXTS = ["HOMES", "ROOFS", "WALLS", "VALUE"];
 
@@ -34,12 +35,13 @@ export const DynamicHero = () => {
                     }}
                 >
                     <NextImage
-                        src="/images/hero-executive-white-gold.png"
+                        src={heroImage}
                         alt="Cape Town Executive Waterproofing and Painting Services | White Marble & Gold Aesthetic"
                         fill
                         className="object-cover opacity-80"
                         priority
-                        quality={90}
+                        quality={80}
+                        placeholder="blur"
                     />
                 </motion.div>
 
