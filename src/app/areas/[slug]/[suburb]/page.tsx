@@ -76,7 +76,7 @@ export default async function SuburbPage({ params }: Props) {
             areaProjects = await db.query.projects.findMany({
                 where: ilike(projects.location, `%${suburbNameOriginal}%`),
                 limit: 3,
-                orderBy: (projects, { desc }) => [desc(projects.createdAt)],
+                orderBy: (projects: any, { desc }: any) => [desc(projects.createdAt)],
             });
         }
     } catch (error) {
