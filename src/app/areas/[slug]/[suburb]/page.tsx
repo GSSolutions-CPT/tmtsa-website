@@ -70,11 +70,19 @@ export default async function SuburbPage({ params }: Props) {
     const heroImage = override?.heroImage || region.heroImage;
 
     // Fetch projects for this area
-    const areaProjects = await db.query.projects.findMany({
-        where: ilike(projects.location, `%${suburbNameOriginal}%`),
-        limit: 3,
-        orderBy: (projects, { desc }) => [desc(projects.createdAt)],
-    });
+    let areaProjects: typeof projects.$inferSelect[] = [];
+    try {
+        if (process.env.POSTGRES_URL) {
+            areaProjects = await db.query.projects.findMany({
+                where: ilike(projects.location, `%${suburbNameOriginal}%`),
+                limit: 3,
+                orderBy: (projects, { desc }) => [desc(projects.createdAt)],
+            });
+        }
+    } catch (error) {
+        console.warn(`Database connection failed for ${suburb}:`, error);
+        // Fallback to empty array
+    }
 
     return (
         <ContentPage

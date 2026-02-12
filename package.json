@@ -18,6 +18,7 @@
     "@vercel/postgres": "^0.10.0",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
+    "dotenv": "^17.2.4",
     "drizzle-orm": "^0.45.1",
     "framer-motion": "^12.29.2",
     "lucide-react": "^0.563.0",
