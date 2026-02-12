@@ -2,6 +2,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { getServiceBySlug, SERVICE_LOCATIONS } from "@/data/services";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { AlertTriangle } from "lucide-react";
 
 // Force static generation for these paths
 export async function generateStaticParams() {
@@ -73,6 +74,26 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             {/* Content Section */}
             <section className="py-20 container mx-auto px-4 max-w-4xl">
+                {/* Structured Data: Common Signs */}
+                {service.structuredData?.commonSigns && (
+                    <div className="mb-16">
+                        <h3 className="font-heading font-bold text-2xl mb-8 uppercase tracking-wide">Signs You Need This Service</h3>
+                        <div className="grid gap-6 md:grid-cols-2">
+                            {service.structuredData.commonSigns.map((sign, idx) => (
+                                <div key={idx} className="bg-red-50/50 p-6 rounded-lg border border-red-100 flex gap-4 items-start">
+                                    <div className="bg-red-100 p-3 rounded-full shrink-0 text-red-600">
+                                        <AlertTriangle className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-lg text-red-900 mb-1">{sign.title}</h4>
+                                        <p className="text-sm text-red-800/80 leading-relaxed">{sign.description}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
                 <div
                     className="prose prose-lg prose-headings:font-heading prose-headings:font-bold prose-headings:uppercase prose-headings:tracking-wide prose-p:text-neutral-600 prose-li:text-neutral-600 prose-strong:text-black prose-img:rounded-sm prose-img:shadow-xl prose-img:border prose-img:border-black/5 max-w-none"
                     dangerouslySetInnerHTML={{ __html: service.content }}

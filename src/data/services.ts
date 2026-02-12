@@ -11,6 +11,7 @@ export type ServiceLocation = {
         processSteps?: { title: string; description: string; }[];
         features?: { title: string; description?: string; }[];
         faqs?: { question: string; answer: string; }[];
+        commonSigns?: { title: string; description: string; }[];
     };
     keywords?: string[];
 };
@@ -39,11 +40,18 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
             <p>From the Atlantic Seaboard to the Southern Suburbs, our mobile teams are ready to deploy. We treat every home with the same rigor as an industrial site—clean, efficient, and built to last.</p>
         `,
         structuredData: {
+            commonSigns: [
+                { title: "Rising Damp", description: "Tide marks or bubbling paint at the bottom of walls." },
+                { title: "Mould Growth", description: "Black or green spots appearing on ceilings and cornices." },
+                { title: "Efflorescence", description: "White, powdery salt deposits pushing through plaster." },
+                { title: "Peeling Paint", description: "Paint flaking off due to moisture trapped behind the surface." }
+            ],
             processSteps: [
-                { title: "Moisture Mapping & Inspection", description: "We identify the exact entry point of water using thermal and moisture meters, not just guesswork." },
-                { title: "Surface Preparation", description: "All old, failing bitumen is stripped. The substrate is primed with a high-penetration bitumen primer." },
-                { title: "Torch-on Application", description: "We heat-fuse a 4mm reinforced bitumen membrane to the substrate, creating a seamless, watertight seal." },
-                { title: "Silver Coat & Flood Test", description: "A UV-reflective silver coating is applied to protect the membrane, followed by a water flood test to guarantee the seal." }
+                { title: "Moisture Assessment", description: "We use thermal cameras and moisture meters to pinpoint the exact source of the leak, not just the symptoms." },
+                { title: "Surface Preparation", description: "All loose material is stripped back. We high-pressure clean the substrate to ensure perfect adhesion for the new system." },
+                { title: "Crack Repair", description: "Structural cracks are opened and filled with flexible epoxy or cementitious slurry to prevent re-opening." },
+                { title: "Waterproofing Application", description: "We apply a double-layer torch-on system or specialized liquid membrane, depending on the traffic and exposure of the area." },
+                { title: "UV Protection", description: "The final layer is coated with high-quality silver aluminium paint or UV-stable topcoat to protect the bitumen from sun damage." }
             ],
             features: [
                 { title: "10-Year Watertight Guarantee", description: "Peace of mind with a transferable warranty." },
@@ -52,9 +60,10 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
                 { title: "Lateral Damp Specialists", description: "Expertise in complex rising and lateral damp treatments." }
             ],
             faqs: [
-                { question: "How long does torch-on waterproofing last?", answer: "When correctly applied and maintained with a silver coat every 2-3 years, a torch-on system can last 10-15 years." },
-                { question: "Can I tile over the waterproofing?", answer: "Yes, but it requires a specialized double-layer system with a focus on counter-flashing. Ask us for a spec sheet." },
-                { question: "Do you offer localized repairs?", answer: "Yes, for minor issues we can do patch repairs, but for older roofs (15+ years), a full replacement is often more cost-effective." }
+                { question: "How long does torch-on waterproofing last?", answer: "When correctly applied and maintained with a silver coat every 2-3 years, a torch-on system can last over 10 years. We offer a 10-year guarantee on full systems." },
+                { question: "Can you waterproof over existing tiles?", answer: "Yes, but it's not always recommended. If the substrate is wet, sealing over it traps moisture. We prefer to strip and seal the slab directly, but we can use specialized non-slip coatings for balconies if the screed is dry." },
+                { question: "What causes rising damp?", answer: "Rising damp occurs when ground water is sucked up through the porous masonry of your walls. A failed or missing DPC (Damp Proof Course) is usually the culprit." },
+                { question: "Is your work guaranteed?", answer: "Yes, we provide a 5 to 10-year guarantee on all major waterproofing projects, subject to routine maintenance." }
             ]
         },
         keywords: ["Waterproofing Cape Town", "Torch-on waterproofing", "Balcony waterproofing", "Damp proofing Cape Town", "Roof leak repair"]
@@ -153,6 +162,11 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
             <p>We stand by our workmanship. All full waterproofing installations come with a certified 10-year guarantee, giving you peace of mind that your asset is protected.</p>
         `,
         structuredData: {
+            commonSigns: [
+                { title: "Rising Damp", description: "Tide marks or bubbling paint." },
+                { title: "Mould Growth", description: "Black or green spots on ceilings." },
+                { title: "Efflorescence", description: "White powdery salt deposits." }
+            ],
             processSteps: [
                 { title: "Moisture Mapping", description: "We identify the exact entry point of water utilizing thermal cameras." },
                 { title: "Surface Preparation", description: "Stripping old bitumen and priming the substrate for a perfect bond." },
