@@ -20,6 +20,18 @@ export const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // Lock scroll when mobile menu is open
+    useEffect(() => {
+        if (mobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [mobileMenuOpen]);
+
     // Close mobile menu when route changes
     useEffect(() => {
         setMobileMenuOpen(false); // eslint-disable-line
@@ -32,7 +44,7 @@ export const Navbar = () => {
     return (
         <nav
             className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent",
+                "fixed top-0 left-0 right-0 z-[100] transition-all duration-300 border-b border-transparent",
                 scrolled || mobileMenuOpen ? "bg-white/95 backdrop-blur-md border-zinc-200 py-4 shadow-sm" : "bg-transparent py-6"
             )}
             onMouseLeave={handleDropdownLeave}
@@ -191,55 +203,63 @@ export const Navbar = () => {
                     <span className="mt-0.5">Menu</span>
                     {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                 </button>
+            </div>
 
-                {/* Mobile Menu Overlay */}
-                <div className={cn(
-                    "fixed inset-0 bg-white z-40 flex flex-col pt-32 px-6 transition-transform duration-300 ease-in-out md:hidden overflow-y-auto",
-                    mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-                )}>
-                    <div className="flex flex-col gap-6 text-xl font-heading font-bold text-zinc-900 uppercase tracking-wide">
-                        <Link href="/" className="border-b border-zinc-100 pb-4 hover:text-tmt-orange transition-colors">Home</Link>
+            {/* Mobile Menu Overlay - Outside container for full-screen coverage */}
+            <div className={cn(
+                "fixed inset-0 bg-white z-[55] flex flex-col pt-32 px-6 transition-transform duration-500 ease-in-out md:hidden overflow-y-auto w-full h-screen",
+                mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            )}>
+                <div className="flex flex-col gap-6 text-xl font-heading font-bold text-zinc-900 uppercase tracking-wide max-w-lg mx-auto w-full">
+                    <Link href="/" className="border-b border-zinc-100 pb-4 hover:text-tmt-orange transition-colors">Home</Link>
 
-                        {/* Mobile Services */}
-                        <div className="border-b border-zinc-100 pb-4">
-                            <span className="text-tmt-orange mb-2 block text-sm">Services</span>
-                            <div className="flex flex-col gap-3 pl-4">
-                                {SITE_DATA.services.map(s => (
-                                    <Link key={s.slug} href={s.href} className="text-base text-zinc-600 hover:text-tmt-orange capitalize font-medium">{s.title}</Link>
-                                ))}
-                            </div>
+                    {/* Mobile Services */}
+                    <div className="border-b border-zinc-100 pb-4">
+                        <span className="text-tmt-orange mb-2 block text-sm">Services</span>
+                        <div className="grid grid-cols-1 gap-3 pl-4">
+                            {SITE_DATA.services.map(s => (
+                                <Link key={s.slug} href={s.href} className="text-base text-zinc-600 hover:text-tmt-orange capitalize font-medium">{s.title}</Link>
+                            ))}
                         </div>
-
-                        {/* Mobile Solutions */}
-                        <div className="border-b border-zinc-100 pb-4">
-                            <span className="text-tmt-orange mb-2 block text-sm">Solutions</span>
-                            <div className="flex flex-col gap-3 pl-4">
-                                {SITE_DATA.solutions.map(s => (
-                                    <Link key={s.slug} href={s.href} className="text-base text-zinc-600 hover:text-tmt-orange capitalize font-medium">{s.title}</Link>
-                                ))}
-                            </div>
-                        </div>
-
-                        <Link href="/areas" className="border-b border-zinc-100 pb-4 hover:text-tmt-orange transition-colors">Areas</Link>
-
-                        {/* Mobile Tools */}
-                        <div className="border-b border-zinc-100 pb-4">
-                            <span className="text-tmt-orange mb-2 block text-sm">Tools</span>
-                            <div className="flex flex-col gap-3 pl-4">
-                                {SITE_DATA.tools.map(s => (
-                                    <Link key={s.href} href={s.href} className="text-base text-zinc-600 hover:text-tmt-orange capitalize font-medium">{s.title}</Link>
-                                ))}
-                            </div>
-                        </div>
-
-                        <Link href="/blog" className="border-b border-zinc-100 pb-4 hover:text-tmt-orange transition-colors">Blog</Link>
-                        <Link href="/contact" className="text-tmt-orange">Get a Quote</Link>
                     </div>
 
-                    <div className="mt-8 pb-12">
-                        <p className="text-zinc-400 text-sm mb-4">Contact Us</p>
-                        <p className="text-xl font-bold text-zinc-900">076 630 0879</p>
-                        <p className="text-zinc-500">info@tmtsa.co.za</p>
+                    {/* Mobile Solutions */}
+                    <div className="border-b border-zinc-100 pb-4">
+                        <span className="text-tmt-orange mb-2 block text-sm">Solutions</span>
+                        <div className="grid grid-cols-1 gap-3 pl-4">
+                            {SITE_DATA.solutions.map(s => (
+                                <Link key={s.slug} href={s.href} className="text-base text-zinc-600 hover:text-tmt-orange capitalize font-medium">{s.title}</Link>
+                            ))}
+                        </div>
+                    </div>
+
+                    <Link href="/areas" className="border-b border-zinc-100 pb-4 hover:text-tmt-orange transition-colors">Areas</Link>
+
+                    {/* Mobile Tools */}
+                    <div className="border-b border-zinc-100 pb-4">
+                        <span className="text-tmt-orange mb-2 block text-sm">Tools</span>
+                        <div className="grid grid-cols-1 gap-3 pl-4">
+                            {SITE_DATA.tools.map(s => (
+                                <Link key={s.href} href={s.href} className="text-base text-zinc-600 hover:text-tmt-orange capitalize font-medium">{s.title}</Link>
+                            ))}
+                        </div>
+                    </div>
+
+                    <Link href="/blog" className="border-b border-zinc-100 pb-4 hover:text-tmt-orange transition-colors">Blog</Link>
+                    <Link href="/contact" className="text-tmt-orange text-2xl">Get a Quote</Link>
+                </div>
+
+                <div className="mt-12 pb-20 max-w-lg mx-auto w-full border-t border-zinc-100 pt-8">
+                    <p className="text-zinc-400 text-sm mb-4">Contact Us</p>
+                    <p className="text-2xl font-bold text-zinc-900 mb-1">076 630 0879</p>
+                    <p className="text-zinc-500 font-medium">info@tmtsa.co.za</p>
+
+                    <div className="mt-8 flex gap-4">
+                        <div className="h-10 w-10 bg-zinc-100 rounded-full flex items-center justify-center">
+                            {/* Social circles placeholders */}
+                        </div>
+                        <div className="h-10 w-10 bg-zinc-100 rounded-full flex items-center justify-center">
+                        </div>
                     </div>
                 </div>
             </div>

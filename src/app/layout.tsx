@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     default: 'The Maintenance Team | Waterproofing & Painting Specialists',
   },
   description: "Cape Town's No.1 specialists for waterproofing, painting, and structural repairs. Serving Durbanville, Blouberg, and greater Cape Town.",
-  keywords: ["Waterproofing Cape Town", "Painters Cape Town", "Roof Repairs", "Spalling Repair", "Home Maintenance", "Industrial Coatings"],
+  keywords: ["Waterproofing Cape Town", "Painters Cape Town", "Roof Repairs", "Spalling Repair", "Damp Proofing", "Torch-on Waterproofing", "Roof Painting", "Concrete Repairs", "Industrial Coatings"],
   authors: [{ name: "The Maintenance Team" }],
   metadataBase: new URL('https://tmtsa.vercel.app/'),
   alternates: {

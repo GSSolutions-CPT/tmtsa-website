@@ -7,7 +7,7 @@ import NextImage from "next/image";
 import { useEffect, useState } from "react";
 import heroImage from "../../../public/images/hero-executive-white-gold.png";
 
-const ROTATING_TEXTS = ["HOMES", "ROOFS", "WALLS", "VALUE"];
+const ROTATING_TEXTS = ["PAINTING", "SPALLING", "ROOFING", "COATINGS"];
 
 export const DynamicHero = () => {
     const [index, setIndex] = useState(0);
@@ -59,26 +59,31 @@ export const DynamicHero = () => {
 
 
                 <h1 className="font-heading font-black text-white text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight uppercase drop-shadow-2xl mb-6">
-                    <div>WE RESTORE</div>
-                    <div className="h-[1.2em] relative overflow-hidden flex justify-center text-tmt-orange">
+                    <span className="block text-2xl md:text-4xl font-bold tracking-widest mb-2 text-tmt-orange">Cape Town&apos;s Premier</span>
+                    <div className="flex flex-col md:block">
+                        <span className="text-white">Waterproofing</span>
+                        <span className="hidden md:inline mx-4 text-neutral-600">|</span>
+                        <span className="text-white">Roofing</span>
+                    </div>
+                </h1>
+
+                <h2 className="mt-4 text-lg md:text-2xl text-white/90 max-w-2xl mx-auto font-medium drop-shadow-md flex items-center justify-center gap-2">
+                    <span>Specializing in</span>
+                    <div className="h-[1.5em] relative overflow-hidden flex justify-center text-tmt-orange w-32 text-left">
                         <AnimatePresence mode="wait">
                             <motion.span
                                 key={ROTATING_TEXTS[index]}
-                                initial={{ y: 50, opacity: 0, rotateX: -90 }}
-                                animate={{ y: 0, opacity: 1, rotateX: 0 }}
-                                exit={{ y: -50, opacity: 0, rotateX: 90 }}
-                                transition={{ duration: 0.5, ease: "backOut" }}
-                                className="block"
+                                initial={{ y: 20, opacity: 0 }}
+                                animate={{ y: 0, opacity: 1 }}
+                                exit={{ y: -20, opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="block font-bold"
                             >
                                 {ROTATING_TEXTS[index]}
                             </motion.span>
                         </AnimatePresence>
                     </div>
-                </h1>
-
-                <p className="mt-4 text-lg md:text-2xl text-white/90 max-w-2xl mx-auto font-medium drop-shadow-md">
-                    Cape Town&apos;s No.1 Specialists in Waterproofing, Painting & Structural Repairs.
-                </p>
+                </h2>
 
                 <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center items-center">
                     <Link

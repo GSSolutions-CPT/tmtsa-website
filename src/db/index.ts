@@ -11,4 +11,5 @@ export const db = ({
         }
     },
     insert: () => ({ values: () => Promise.resolve() }),
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
 }) as any;

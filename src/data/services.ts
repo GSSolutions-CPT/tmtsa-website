@@ -247,15 +247,40 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
         title: "Residential Maintenance Plumbing & Repairs",
         description: "Reliable plumbing services for leak detection, blocked drains, and geyser maintenance. Fast turnaround times for emergencies.",
         content: `
-            <h2>Reliable Maintenance Plumbing</h2>
-            <p>From a dripping tap to a burst geyser, our plumbing division handles all general maintenance and emergency repairs. We pride ourselves on quick response times and tidy workmanship.</p>
+            <h2>24/7 Residential & Commercial Plumbing in Cape Town</h2>
+            <p><strong>Emergency Repairs | Maintenance | Geyser Installations | Blocked Drains</strong></p>
+            <p>From a burst geyser at 2 AM to a blocked drain flooding your driveway, plumbing emergencies wait for no one. <strong>The Maintenance Team (TMT)</strong> provides rapid-response plumbing services across Cape Town, ensuring that small leaks don’t turn into structural disasters.</p>
+            <p>We are registered with the <strong>Plumbing Industry Registration Board (PIRB)</strong>, guaranteeing that all work complies with SANS 10254 standards. Whether it’s a simple tap washer replacement or a complex sewer line repair, we bring the same level of professionalism and hygiene to every job.</p>
+
+            <h3>Why Choose TMT Plumbing?</h3>
+            <ul class="list-disc pl-5 mb-4 space-y-2">
+                <li><strong>Rapid Response:</strong> Our mobile units are stocked with common spares to fix 90% of issues on the first visit.</li>
+                <li><strong>Transparent Pricing:</strong> No hidden call-out fees. We inspect, quote, and only proceed with your approval.</li>
+                <li><strong>COC Certification:</strong> We issue Certificates of Compliance for property transfers and insurance claims.</li>
+            </ul>
+
+            <h3>Our Core Plumbing Services</h3>
+            <h4>1. Leak Detection & Repair</h4>
+            <p>Water leaks can remain hidden for months, causing rot and rising damp. We use acoustic listening devices and thermal imaging to pinpoint leaks behind walls and under concrete slabs without unnecessary chopping.</p>
+
+            <h4>2. Geyser Installation & Maintenance</h4>
+            <p>No hot water? We repair and replace Kwikot and Heat Tech geysers. We also install <strong>GeyserWise</strong> timers to cut your electricity bill by up to 20%.</p>
+
+            <h4>3. Blocked Drains</h4>
+            <p>We use industrial Roto-Rooter machines and high-pressure jetting to clear stubborn tree roots, grease, and fat deposits from your sewer lines.</p>
         `,
         structuredData: {
+            commonSigns: [
+                { title: "High Water Bill", description: "An unexplained spike in your municipal account often indicates a hidden leak." },
+                { title: "Damp Patches", description: "Wet spots on walls or bubbling paint near bathrooms or kitchens." },
+                { title: "Low Water Pressure", description: "A sudden drop in pressure could mean a burst pipe or sediment buildup." },
+                { title: "Noises in Pipes", description: "Banging or whistling sounds (water hammer) indicate loose pipes or valve failure." }
+            ],
             processSteps: [
-                { title: "Leak Detection", description: "Using acoustic and thermal equipment to pinpoint hidden leaks." },
-                { title: "Assessment & Quote", description: "We provide a clear, itemized quote before starting any work." },
-                { title: "Repair & Replace", description: "Using SABS-approved parts for lasting repairs." },
-                { title: "Testing & Certification", description: "Pressure testing and issuing COC certificates where required." }
+                { title: "Diagnostic Assessment", description: "We arrive, isolate the mains if necessary, and use diagnostic tools to identify the fault." },
+                { title: "Quote & Approval", description: "We provide a fixed-cost quote. For insurance claims, we generate a detailed report with photos." },
+                { title: "Repair Execution", description: "Our plumbers carry out the repair using SABS-approved Class-0 copper or Polycop pipes." },
+                { title: "Pressure Testing", description: "We pressure test the system to 600kPa to ensure the repair holds and no other leaks exist." }
             ],
             features: [
                 { title: "24/7 Emergency", description: "We are available when you need us most." },
@@ -265,7 +290,9 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
             ],
             faqs: [
                 { question: "Do you issue Plumbing COCs?", answer: "Yes, we can inspect and issue Certificates of Compliance for property transfers." },
-                { question: "Do you help with insurance claims?", answer: "Yes, we provide detailed reports and photos to assist with your insurance claim." }
+                { question: "Do you help with insurance claims?", answer: "Yes, we provide detailed reports and photos to assist with your insurance claim." },
+                { question: "Why is my geyser overflowing?", answer: "This is usually a faulty fast-release valve (TP valve). It's a safety mechanism that needs immediate replacement." },
+                { question: "Can you unblock drains without digging?", answer: "In most cases, yes. Our high-pressure jetting and rods can clear blockages from the inspection eye." }
             ]
         }
     },
@@ -277,27 +304,48 @@ export const SERVICE_LOCATIONS: ServiceLocation[] = [
         title: "Full-Service Bathroom & Kitchen Renovations",
         description: "Turnkey renovation services. We handle the entire project from demolition to tiling, plumbing, and electrical, delivering showroom-quality results.",
         content: `
-            <h2>Turnkey Property Renovations</h2>
-            <p>Renovating shouldn't be stressful. TMT offers a complete project management service for bathroom and kitchen makeovers. We coordinate all trades, so you only deal with one point of contact.</p>
+            <h2>Turnkey Bathroom & Kitchen Renovations Cape Town</h2>
+            <p><strong>Design | Demolition | Installation | Project Management</strong></p>
+            <p>Renovating a kitchen or bathroom is the single best investment you can make to increase your property's value. However, coordinating plumbers, electricians, tilers, and carpenters can be a nightmare. <strong>The Maintenance Team</strong> offers a full "Turnkey" solution—we manage the entire project from concept to completion.</p>
+            <p>We specialize in modernizing older Cape Town homes, opening up spaces, and creating functional, beautiful wet areas. Whether you want a spa-like frameless shower or a chef's kitchen with island seating, we have the skills to deliver.</p>
 
-            <img src="/images/services/content-renovation.png" alt="Bathroom Renovation" class="rounded-lg shadow-lg my-8 w-full block" />
+            <h3>The "No-Headache" Renovation</h3>
+            <p>We pride ourselves on site cleanliness. We screen off the work area to minimize dust in the rest of your home and remove rubble daily. Our team respects that we are working in your living space.</p>
+
+            <h3>Our Renovation Services</h3>
+            <h4>1. Bathroom Makeovers</h4>
+            <p>From replacing a bathtub with a walk-in shower to installing floating vanities and Geberit concealed cisterns. We handle all waterproofing to ensure your new bathroom never leaks.</p>
+
+            <h4>2. Kitchen Remodeling</h4>
+            <p>We coordinate with kitchen manufacturers for cabinetry installation while handling the critical "dirty work"—moving plumbing points, chasing new electrical sockets, and laying porcelain tiles.</p>
+
+            <h4>3. Tiling & Flooring</h4>
+            <p>Our master tilers are experts in large-format porcelain, natural stone, and subway tiles. We ensure perfect leveling and alignment for a showroom finish.</p>
         `,
         structuredData: {
+            commonSigns: [
+                { title: "Outdated Aesthetics", description: "Avocado green baths and floral tiles from the 70s devaluing your home." },
+                { title: "Leaking Showers", description: "Grout failing and causing damp in adjacent walls." },
+                { title: "Poor Layout", description: "Cramped spaces and bad workflow in kitchens." },
+                { title: "Low Water Pressure", description: "Old galvanized pipes restricting flow." }
+            ],
             processSteps: [
-                { title: "Consultation & Design", description: "We meet to discuss your vision, budget, and material choices." },
-                { title: "Demolition & Prep", description: "Safe strip-out of old fixtures and carting away of rubble." },
-                { title: "Installation", description: "Plumbing, electrical, tiling, and cabinetry installation by skilled tradesmen." },
-                { title: "Snagging & Handover", description: "Final quality checks and cleaning before handover." }
+                { title: "Consultation & Design", description: "We meet to discuss your vision, budget, and material choices. We measure up and provide a detailed scope of work." },
+                { title: "Demolition & Prep", description: "Safe strip-out of old fixtures. We verify that waste pipes and water feeds are correctly positioned for the new layout." },
+                { title: "Rough-In & Waterproofing", description: "Plumbing and electrical first-fix. We apply a full waterproofing membrane to shower areas—critical for longevity." },
+                { title: "Installation & Finish", description: "Tiling, grouting, and sanitaryware installation. Final electrical connections and silicone sealing." }
             ],
             features: [
                 { title: "Turnkey Project Management", description: "One contact person for the whole job." },
                 { title: "Licensed Trades", description: "Qualified plumbers and electricians." },
-                { title: "Quality Finishes", description: "Expert tiling and joinery." },
+                { title: "Waterproofing Experts", description: "We ensure wet areas are 100% sealed." },
                 { title: "On-Time Delivery", description: "We stick to the agreed schedule." }
             ],
             faqs: [
-                { question: "Do I need plans?", answer: "For internal cosmetic changes, usually no. Structural changes will require plans." },
-                { question: "How long does a bathroom renovation take?", answer: "Typically 10-14 working days, depending on the complexity." }
+                { question: "Do I need plans?", answer: "For internal cosmetic changes, usually no. Structural changes (moving walls) will require engineer's plans." },
+                { question: "How long does a bathroom renovation take?", answer: "Typically 10-14 working days. We allow 3 days for waterproofing and tiling curing times." },
+                { question: "Do you supply the tiles and taps?", answer: "We advise on PC items (Prime Cost items), but usually, clients purchase their preferred finishings to ensure they get exactly what they want." },
+                { question: "Is the work guaranteed?", answer: "Yes, we offer a 2-year guarantee on workmanship, and all plumbing comes with a COC." }
             ]
         },
         keywords: ["Bathroom renovations Cape Town", "Kitchen renovations", "Turnkey renovations", "Home improvements"]

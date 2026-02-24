@@ -3,6 +3,7 @@ import { getServiceBySlug, SERVICE_LOCATIONS } from "@/data/services";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AlertTriangle } from "lucide-react";
+import Link from "next/link";
 
 // Force static generation for these paths
 export async function generateStaticParams() {
@@ -161,9 +162,20 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <div className="mt-16 border-t border-neutral-100 pt-12 text-center">
                     <h3 className="font-heading font-bold text-3xl mb-6 uppercase">Ready to Start?</h3>
                     <p className="text-neutral-500 mb-8 max-w-xl mx-auto">Contact us today for a free consultation and quote for your {service.service} project.</p>
-                    <a href="/contact" className="inline-block px-10 py-4 bg-tmt-dark text-white font-bold uppercase tracking-widest hover:bg-tmt-orange hover:text-white transition-colors duration-300">
+                    <Link href="/contact" className="inline-block px-10 py-4 bg-tmt-dark text-white font-bold uppercase tracking-widest hover:bg-tmt-orange hover:text-white transition-colors duration-300">
                         Get a Quote
-                    </a>
+                    </Link>
+                </div>
+
+                {/* Related Services Navigation */}
+                <div className="mt-24 pt-12 border-t border-neutral-200">
+                    <h3 className="font-heading font-bold text-sm text-neutral-400 uppercase tracking-widest mb-8 text-center">Explore Other Services</h3>
+                    <div className="flex flex-wrap justify-center gap-4">
+                        <Link href="/services/waterproofing" className="px-6 py-3 border border-neutral-200 rounded-full text-sm font-bold text-neutral-600 hover:border-tmt-orange hover:text-tmt-orange transition-colors">Waterproofing</Link>
+                        <Link href="/services/painting-roofing" className="px-6 py-3 border border-neutral-200 rounded-full text-sm font-bold text-neutral-600 hover:border-tmt-orange hover:text-tmt-orange transition-colors">Roof Painting</Link>
+                        <Link href="/services/structural-repairs" className="px-6 py-3 border border-neutral-200 rounded-full text-sm font-bold text-neutral-600 hover:border-tmt-orange hover:text-tmt-orange transition-colors">Structural Repairs</Link>
+                        <Link href="/services/renovations" className="px-6 py-3 border border-neutral-200 rounded-full text-sm font-bold text-neutral-600 hover:border-tmt-orange hover:text-tmt-orange transition-colors">Renovations</Link>
+                    </div>
                 </div>
             </section>
         </main>

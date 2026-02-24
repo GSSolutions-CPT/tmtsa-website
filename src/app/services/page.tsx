@@ -62,6 +62,16 @@ export default function ServicesPage() {
                 size="compact"
             />
 
+            {/* SEO Intro for Hub Page */}
+            <section className="py-20 text-center max-w-4xl mx-auto px-4">
+                <h2 className="font-heading text-3xl font-bold mb-6">Cape Town&apos;s Full-Service Contractors</h2>
+                <div className="w-24 h-1 bg-tmt-orange mx-auto rounded-full mb-8"></div>
+                <p className="text-neutral-600 text-lg leading-relaxed">
+                    Most contractors specialize in just one trade. <strong>The Maintenance Team</strong> integrates <strong>structural waterproofing</strong>, <strong>roofing</strong>, <strong>painting</strong>, and <strong>renovations</strong> under one roof.
+                    This holistic approach means we don&apos;t just paint over a crack—we fix the structural issue causing it. From <strong>Durbanville</strong> to the <strong>Atlantic Seaboard</strong>, trust us with your most valuable asset.
+                </p>
+            </section>
+
             {/* 2. Services Grid */}
             <section className="pb-32 px-4 container mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

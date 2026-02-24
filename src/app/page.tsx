@@ -32,6 +32,21 @@ export default async function HomePage() {
       {/* 1. HERO SECTION */}
       <DynamicHero />
 
+      {/* 1.5. SEO INTRO SECTION */}
+      <section className="py-20 bg-white text-center">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold text-black mb-6">
+            Cape Town’s Trusted <span className="text-tmt-orange">Waterproofing</span> & <span className="text-tmt-orange">Roofing</span> Experts
+          </h2>
+          <p className="text-neutral-600 text-lg leading-relaxed mb-8">
+            The Maintenance Team (TMT) is Cape Town&apos;s premier contractor for <strong>industrial waterproofing</strong>, <strong>roof painting</strong>, and <strong>structural repairs</strong>.
+            Serving the greater Cape Town area—from the <strong>Atlantic Seaboard</strong> to <strong>Durbanville</strong>—we deliver long-term solutions backed by our <strong>10-year insurance-backed guarantee</strong>.
+            Whether you have rising damp, spalling concrete, or a leaking roof, our master craftsmen use Sika and Abe approved systems to restore and protect your property.
+          </p>
+          <div className="w-24 h-1 bg-tmt-orange mx-auto rounded-full"></div>
+        </div>
+      </section>
+
       {/* 2. SERVICES SECTION (Bento Grid) */}
       <section className="py-32 px-4 container mx-auto" id="services">
         <div className="mb-20 text-center">

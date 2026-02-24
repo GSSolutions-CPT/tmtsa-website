@@ -118,9 +118,9 @@ export const Footer = () => {
                             <li><Link href="/faq" className="hover:text-tmt-orange transition-colors">FAQs</Link></li>
                         </ul>
                         <div className="flex gap-4">
-                            <a href="#" className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:bg-tmt-orange hover:text-white transition-all" aria-label="Visit our Facebook page"><Facebook className="w-4 h-4" /></a>
-                            <a href="#" className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:bg-tmt-orange hover:text-white transition-all" aria-label="Visit our Instagram profile"><Instagram className="w-4 h-4" /></a>
-                            <a href="#" className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:bg-tmt-orange hover:text-white transition-all" aria-label="Visit our LinkedIn profile"><Linkedin className="w-4 h-4" /></a>
+                            <Link href="#" className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:bg-tmt-orange hover:text-white transition-all" aria-label="Visit our Facebook page"><Facebook className="w-4 h-4" /></Link>
+                            <Link href="#" className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:bg-tmt-orange hover:text-white transition-all" aria-label="Visit our Instagram profile"><Instagram className="w-4 h-4" /></Link>
+                            <Link href="#" className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:bg-tmt-orange hover:text-white transition-all" aria-label="Visit our LinkedIn profile"><Linkedin className="w-4 h-4" /></Link>
                         </div>
                     </div>
                 </div>
