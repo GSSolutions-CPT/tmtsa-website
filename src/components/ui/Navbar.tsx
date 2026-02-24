@@ -197,7 +197,7 @@ export const Navbar = () => {
                         "md:hidden flex items-center gap-2 relative z-[60] cursor-pointer font-bold uppercase tracking-widest text-xs border px-3 py-2 rounded transition-colors",
                         scrolled || mobileMenuOpen
                             ? "border-zinc-200 text-zinc-900 hover:bg-zinc-100"
-                            : "border-white/30 text-white hover:bg-white/10"
+                            : "border-white/30 text-white bg-black/20 backdrop-blur-sm hover:bg-black/40"
                     )}
                 >
                     <span className="mt-0.5">Menu</span>

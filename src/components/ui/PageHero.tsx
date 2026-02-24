@@ -42,7 +42,7 @@ export const PageHero = ({ title, subtitle, imageSrc, imageAlt, size = "default"
         </motion.div>
 
         {/* Executive Gold Overlay: Minimal Dark for Contrast */}
-        <div className="absolute inset-0 bg-black/20 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/60 z-10" />
 
         {/* Seamless Blend to Page Background (White) */}
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent z-20" />
