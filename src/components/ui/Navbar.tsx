@@ -56,6 +56,7 @@ export const Navbar = () => {
                         src={scrolled || mobileMenuOpen ? "/images/tmt-logo-2026.png" : "/images/tmt-logo-white-2026.png"}
                         alt="The Maintenance Team"
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-contain"
                         priority
                     />

@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "public.blob.vercel-storage.com" },
     ],
     formats: ['image/avif', 'image/webp'],
+    qualities: [75, 80],
   },
 };
 

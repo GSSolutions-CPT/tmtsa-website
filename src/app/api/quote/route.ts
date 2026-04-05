@@ -6,7 +6,11 @@ import LeadNotificationEmail from '@/components/emails/LeadNotification';
 
 // POST /api/quote
 export async function POST(req: Request) {
-    const ADMIN_EMAIL = 'info@themaintenanceteamsa.co.za';
+    const ADMIN_EMAILS = [
+        'Admin <admin@themaintenanceteamsa.co.za>',
+        'Sage Seeley <info@themaintenanceteamsa.co.za>',
+        'Sage <sage@themaintenanceteamsa.co.za>'
+    ];
     try {
         const data = await req.json();
 
@@ -30,8 +34,8 @@ export async function POST(req: Request) {
             try {
                 const resend = new Resend(process.env.RESEND_API_KEY);
                 const { error } = await resend.emails.send({
-                    from: 'TMT Website <onboarding@resend.dev>', // Update to verified domain e.g., notifications@themaintenanceteamsa.co.za
-                    to: [ADMIN_EMAIL],
+                    from: 'TMT Website <notifications@themaintenanceteamsa.co.za>', // Update to verified domain e.g., notifications@themaintenanceteamsa.co.za
+                    to: ADMIN_EMAILS,
                     subject: `New Lead: ${data.serviceType} from ${data.name}`,
                     react: LeadNotificationEmail({
                         name: data.name,
