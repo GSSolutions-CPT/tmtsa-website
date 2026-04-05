@@ -7,9 +7,9 @@ import LeadNotificationEmail from '@/components/emails/LeadNotification';
 // POST /api/quote
 export async function POST(req: Request) {
     const ADMIN_EMAILS = [
-        'Admin <admin@themaintenanceteamsa.co.za>',
-        'Sage Seeley <info@themaintenanceteamsa.co.za>',
-        'Sage <sage@themaintenanceteamsa.co.za>'
+        'admin@themaintenanceteamsa.co.za',
+        'info@themaintenanceteamsa.co.za',
+        'sage@themaintenanceteamsa.co.za'
     ];
     try {
         const data = await req.json();
