@@ -61,19 +61,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Google tag (gtag.js) */}
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-18066268218" strategy="afterInteractive" />
-        <Script id="google-ads-tag" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'AW-18066268218');
-          `}
-        </Script>
-      </head>
       <body
         className={`${manrope.variable} ${outfit.variable} antialiased`}
       >
@@ -84,6 +71,17 @@ export default function RootLayout({
         <WhatsAppFloat />
         <Analytics />
         <VercelAnalytics />
+        {/* Google tag (gtag.js) - Google Ads Conversion Tracking */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-18066268218" strategy="afterInteractive" />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-18066268218');
+          `}
+        </Script>
       </body>
     </html>
   );

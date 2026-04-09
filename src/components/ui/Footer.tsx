@@ -57,7 +57,10 @@ export const Footer = () => {
                                 className="flex gap-2"
                             >
                                 <input
+                                    id="newsletter-email"
+                                    name="email"
                                     type="email"
+                                    autoComplete="email"
                                     placeholder="Enter your email"
                                     required
                                     className="bg-zinc-900 border border-zinc-800 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-tmt-orange transition-colors text-white placeholder:text-zinc-600"

@@ -48,23 +48,23 @@ export default function ContactForm() {
         >
             <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                    <label className="text-sm font-bold uppercase text-neutral-500">Name</label>
-                    <input name="name" type="text" required className="w-full bg-black/50 border border-white/20 rounded-lg p-3 text-white focus:border-tmt-orange focus:outline-none transition-colors" placeholder="John Doe" />
+                    <label htmlFor="contact-name" className="text-sm font-bold uppercase text-neutral-500">Name</label>
+                    <input id="contact-name" name="name" type="text" autoComplete="name" required className="w-full bg-black/50 border border-white/20 rounded-lg p-3 text-white focus:border-tmt-orange focus:outline-none transition-colors" placeholder="John Doe" />
                 </div>
                 <div className="space-y-2">
-                    <label className="text-sm font-bold uppercase text-neutral-500">Phone</label>
-                    <input name="phone" type="tel" required className="w-full bg-black/50 border border-white/20 rounded-lg p-3 text-white focus:border-tmt-orange focus:outline-none transition-colors" placeholder="071 234 5678" />
+                    <label htmlFor="contact-phone" className="text-sm font-bold uppercase text-neutral-500">Phone</label>
+                    <input id="contact-phone" name="phone" type="tel" autoComplete="tel" required className="w-full bg-black/50 border border-white/20 rounded-lg p-3 text-white focus:border-tmt-orange focus:outline-none transition-colors" placeholder="071 234 5678" />
                 </div>
             </div>
 
             <div className="space-y-2">
-                <label className="text-sm font-bold uppercase text-neutral-500">Email</label>
-                <input name="email" type="email" required className="w-full bg-black/50 border border-white/20 rounded-lg p-3 text-white focus:border-tmt-orange focus:outline-none transition-colors" placeholder="john@example.com" />
+                <label htmlFor="contact-email" className="text-sm font-bold uppercase text-neutral-500">Email</label>
+                <input id="contact-email" name="email" type="email" autoComplete="email" required className="w-full bg-black/50 border border-white/20 rounded-lg p-3 text-white focus:border-tmt-orange focus:outline-none transition-colors" placeholder="john@example.com" />
             </div>
 
             <div className="space-y-2">
-                <label className="text-sm font-bold uppercase text-neutral-500">Service Required</label>
-                <select name="serviceType" className="w-full bg-black/50 border border-white/20 rounded-lg p-3 text-white focus:border-tmt-orange focus:outline-none transition-colors">
+                <label htmlFor="contact-service" className="text-sm font-bold uppercase text-neutral-500">Service Required</label>
+                <select id="contact-service" name="serviceType" className="w-full bg-black/50 border border-white/20 rounded-lg p-3 text-white focus:border-tmt-orange focus:outline-none transition-colors">
                     <option value="Waterproofing">Waterproofing</option>
                     <option value="Painting">Painting (Interior/Exterior)</option>
                     <option value="Roofing">Roofing Repairs</option>
@@ -74,8 +74,8 @@ export default function ContactForm() {
             </div>
 
             <div className="space-y-2">
-                <label className="text-sm font-bold uppercase text-neutral-500">Message</label>
-                <textarea name="message" className="w-full bg-black/50 border border-white/20 rounded-lg p-3 text-white h-32 focus:border-tmt-orange focus:outline-none transition-colors" placeholder="Tell us about your project..." />
+                <label htmlFor="contact-message" className="text-sm font-bold uppercase text-neutral-500">Message</label>
+                <textarea id="contact-message" name="message" className="w-full bg-black/50 border border-white/20 rounded-lg p-3 text-white h-32 focus:border-tmt-orange focus:outline-none transition-colors" placeholder="Tell us about your project..." />
             </div>
 
             <button type="submit" className="w-full bg-tmt-orange text-white font-bold py-4 rounded-lg uppercase tracking-wider hover:bg-orange-600 transition-colors flex items-center justify-center gap-2">

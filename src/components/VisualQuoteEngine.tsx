@@ -276,7 +276,7 @@ export const VisualQuoteEngine = () => {
                                         </>
                                     )}
                                 </div>
-                                <input type="file" className="hidden" accept="image/*" onChange={handleImageUpload} />
+                                <input id="quote-photo-upload" name="photo" type="file" className="hidden" accept="image/*" onChange={handleImageUpload} />
                             </label>
                         </div>
 
