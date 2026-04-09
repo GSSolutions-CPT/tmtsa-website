@@ -12,7 +12,7 @@ export default function SchemaMarkup({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "The Maintenance Team",
-        "image": "https://tmtsa.vercel.app/images/tmt-logo-dark.png",
+        "image": "https://www.themaintenanceteamsa.co.za/images/tmt-logo-dark.png",
         "telephone": "076 630 0879",
         "email": "info@themaintenanceteamsa.co.za",
         "address": {
@@ -29,7 +29,7 @@ export default function SchemaMarkup({
             { "@type": "Place", "name": "Winelands" },
             { "@type": "Place", "name": "City Bowl" }
         ],
-        "url": "https://tmtsa.vercel.app/",
+        "url": "https://www.themaintenanceteamsa.co.za/",
         "sameAs": [
             "https://www.facebook.com/TheMaintenanceTeamSA",
             "https://www.instagram.com/themaintenanceteamsa"

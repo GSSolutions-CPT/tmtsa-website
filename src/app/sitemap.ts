@@ -2,7 +2,7 @@ import { SITE_DATA } from '@/lib/siteData';
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://tmtsa.vercel.app';
+    const baseUrl = 'https://www.themaintenanceteamsa.co.za';
 
     // Static routes
     const routes = [

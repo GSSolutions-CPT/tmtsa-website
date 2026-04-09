@@ -46,7 +46,7 @@ export default async function SolutionPage({ params }: Props) {
         "provider": {
             "@type": "HomeAndConstructionBusiness",
             "name": "The Maintenance Team",
-            "image": "https://tmtsa.vercel.app/images/tmt-logo-2026.png",
+            "image": "https://www.themaintenanceteamsa.co.za/images/tmt-logo-2026.png",
             "telephone": "+27766300879",
             "address": {
                 "@type": "PostalAddress",

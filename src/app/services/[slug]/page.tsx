@@ -42,7 +42,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         "provider": {
             "@type": "HomeAndConstructionBusiness",
             "name": "The Maintenance Team",
-            "image": "https://tmtsa.vercel.app/images/tmt-logo-2026.png", // Correct logo path
+            "image": "https://www.themaintenanceteamsa.co.za/images/tmt-logo-2026.png", // Correct logo path
             "telephone": "+27766300879",
             "address": {
                 "@type": "PostalAddress",
