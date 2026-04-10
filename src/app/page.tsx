@@ -74,7 +74,7 @@ export default async function HomePage() {
                 alt="Professional Industrial Waterproofing Services in Cape Town"
                 fill
                 className="object-cover opacity-80 transparent"
-                sizes="(max-width: 768px) 100vw, 66vw"
+                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 66vw, 800px"
               />
             }
           />
@@ -92,7 +92,7 @@ export default async function HomePage() {
                 alt="Expert Residential Painting and Decorating Services"
                 fill
                 className="object-cover opacity-80"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 33vw, 400px"
               />
             }
           />
@@ -110,7 +110,7 @@ export default async function HomePage() {
                 alt="Commercial and Residential Cleaning Services"
                 fill
                 className="object-cover opacity-80"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 33vw, 400px"
               />
             }
           />

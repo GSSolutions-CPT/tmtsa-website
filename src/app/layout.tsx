@@ -12,11 +12,15 @@ import "./globals.css";
 const manrope = Manrope({
   variable: "--font-manrope", // Replaces Inter for Body
   subsets: ["latin"],
+  display: 'swap',
+  adjustFontFallback: true,
 });
 
 const outfit = Outfit({
   variable: "--font-outfit", // Replaces Space Grotesk for Headings
   subsets: ["latin"],
+  display: 'swap',
+  adjustFontFallback: true,
 });
 
 

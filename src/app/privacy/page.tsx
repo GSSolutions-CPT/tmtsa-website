@@ -10,7 +10,7 @@ export default function PrivacyPolicy() {
                 <section className="mb-8">
                     <h2 className="text-2xl font-bold mb-4 font-heading text-neutral-900">1. Introduction</h2>
                     <p>
-                        The Maintenance Team (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) respects your privacy and is committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website (<a href="https://tmtsa.vercel.app" className="text-tmt-orange hover:underline">tmtsa.vercel.app</a>) and tell you about your privacy rights and how the law protects you.
+                        The Maintenance Team (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) respects your privacy and is committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website (<a href="https://www.themaintenanceteamsa.co.za" className="text-tmt-orange hover:underline">www.themaintenanceteamsa.co.za</a>) and tell you about your privacy rights and how the law protects you.
                     </p>
                 </section>
 
