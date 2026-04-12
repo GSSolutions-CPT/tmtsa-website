@@ -3,9 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import NextImage from "next/image";
 import { useEffect, useState } from "react";
-import heroImage from "../../../public/images/hero-executive-white-gold.png";
 
 const ROTATING_TEXTS = ["PAINTING", "SPALLING", "ROOFING", "COATINGS"];
 
@@ -34,14 +32,13 @@ export const DynamicHero = () => {
                         ease: "linear",
                     }}
                 >
-                    <NextImage
-                        src={heroImage}
-                        alt="Cape Town Executive Waterproofing and Painting Services | White Marble & Gold Aesthetic"
-                        fill
-                        className="object-cover opacity-80"
-                        priority
-                        quality={80}
-                        placeholder="blur"
+                    <video
+                        src="/videos/tmtfrontpage.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover opacity-80"
                     />
                 </motion.div>
 
