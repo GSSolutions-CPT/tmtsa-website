@@ -3,6 +3,7 @@ import { Manrope, Outfit } from "next/font/google"; // High-end Geometric Sans
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { WhatsAppFloat } from "@/components/ui/WhatsAppFloat";
+import { CookieBanner } from "@/components/ui/CookieBanner";
 import { Analytics } from "@/components/analytics/Analytics";
 import SchemaMarkup from "@/components/SchemaMarkup";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
@@ -72,6 +73,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <CookieBanner />
         <WhatsAppFloat />
         <Analytics />
         <VercelAnalytics />
@@ -81,6 +83,19 @@ export default function RootLayout({
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+
+            // Cookie Consent Default Initialization
+            var consentStr = localStorage.getItem('cookie_consent');
+            var isConsented = consentStr === 'granted';
+
+            gtag('consent', 'default', {
+              'ad_user_data': isConsented ? 'granted' : 'denied',
+              'ad_personalization': isConsented ? 'granted' : 'denied',
+              'ad_storage': isConsented ? 'granted' : 'denied',
+              'analytics_storage': isConsented ? 'granted' : 'denied',
+              'wait_for_update': 500
+            });
+
             gtag('js', new Date());
 
             gtag('config', 'AW-18066268218');
