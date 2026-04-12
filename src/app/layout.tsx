@@ -75,15 +75,16 @@ export default function RootLayout({
         <WhatsAppFloat />
         <Analytics />
         <VercelAnalytics />
-        {/* Google tag (gtag.js) - Google Ads Conversion Tracking */}
+        {/* Google tag (gtag.js) - Google Ads & Analytics */}
         <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-18066268218" strategy="afterInteractive" />
-        <Script id="google-ads-tag" strategy="afterInteractive">
+        <Script id="google-analytics-tag" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
             gtag('config', 'AW-18066268218');
+            gtag('config', 'G-1Y0QDGL8VS');
           `}
         </Script>
       </body>
