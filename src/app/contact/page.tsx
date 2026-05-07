@@ -1,5 +1,4 @@
-import { BadgeCheck, Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
-import ContactForm from "@/components/ContactForm";
+import { BadgeCheck, Mail, MapPin, Phone, ShieldCheck, MessageCircle } from "lucide-react";
 
 export const metadata = {
     title: "Contact Us | The Maintenance Team",
@@ -23,19 +22,47 @@ export default function ContactPage() {
                         <h2 className="font-heading text-3xl font-bold text-tmt-orange mb-8">Contact Details</h2>
 
                         <div className="flex items-start gap-4">
+                            <MessageCircle className="w-6 h-6 text-tmt-orange shrink-0 mt-1" />
+                            <div>
+                                <h3 className="font-bold text-lg mb-1">WhatsApp Line</h3>
+                                <a href="https://wa.me/27766300879" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-tmt-orange transition-colors">076 630 0879</a>
+                                <p className="text-sm text-neutral-500 mt-1">Strictly WhatsApp, no phone calls.</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start gap-4">
                             <Phone className="w-6 h-6 text-tmt-orange shrink-0 mt-1" />
                             <div>
-                                <h3 className="font-bold text-lg mb-1">Phone / WhatsApp</h3>
-                                <a href="tel:+27766300879" className="text-xl hover:text-tmt-orange transition-colors">+27 76 630 0879</a>
-                                <p className="text-sm text-neutral-500 mt-1">Available 08:00 - 17:00 (Mon-Fri)</p>
+                                <h3 className="font-bold text-lg mb-1">Management Team</h3>
+                                <div className="space-y-4 mt-2">
+                                    <div>
+                                        <p className="font-semibold text-white">Sage Seeley <span className="font-normal text-neutral-400 text-sm">- CEO & Founder</span></p>
+                                        <div className="flex flex-col text-sm mt-1">
+                                            <a href="tel:+27791612160" className="hover:text-tmt-orange transition-colors">079 161 2160</a>
+                                            <a href="mailto:Sage@TheMaintenanceTeamSA.com" className="hover:text-tmt-orange transition-colors">Sage@TheMaintenanceTeamSA.com</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className="font-semibold text-white">Levonde Roos <span className="font-normal text-neutral-400 text-sm">- COO</span></p>
+                                        <div className="flex flex-col text-sm mt-1">
+                                            <a href="tel:+27606727343" className="hover:text-tmt-orange transition-colors">060 672 7343</a>
+                                            <a href="mailto:Lavonde@TheMaintenanceTeamSA.com" className="hover:text-tmt-orange transition-colors">Lavonde@TheMaintenanceTeamSA.com</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div className="flex items-start gap-4">
                             <Mail className="w-6 h-6 text-tmt-orange shrink-0 mt-1" />
                             <div>
-                                <h3 className="font-bold text-lg mb-1">Email</h3>
-                                <a href="mailto:info@themaintenanceteamsa.co.za" className="text-xl hover:text-tmt-orange transition-colors">info@themaintenanceteamsa.co.za</a>
+                                <h3 className="font-bold text-lg mb-1">Departments</h3>
+                                <div className="flex flex-col space-y-1 mt-2 text-sm">
+                                    <a href="mailto:Info@TheMaintenanceTeamSA.com" className="hover:text-tmt-orange transition-colors"><span className="text-neutral-400 inline-block w-20">General:</span> Info@TheMaintenanceTeamSA.com</a>
+                                    <a href="mailto:Admin@TheMaintenanceTeamSA.com" className="hover:text-tmt-orange transition-colors"><span className="text-neutral-400 inline-block w-20">Admin:</span> Admin@TheMaintenanceTeamSA.com</a>
+                                    <a href="mailto:Accounts@TheMaintenanceTeamSA.com" className="hover:text-tmt-orange transition-colors"><span className="text-neutral-400 inline-block w-20">Accounts:</span> Accounts@TheMaintenanceTeamSA.com</a>
+                                    <a href="mailto:Sales@TheMaintenanceTeamSA.com" className="hover:text-tmt-orange transition-colors"><span className="text-neutral-400 inline-block w-20">Sales:</span> Sales@TheMaintenanceTeamSA.com</a>
+                                </div>
                             </div>
                         </div>
 
@@ -69,12 +96,24 @@ export default function ContactPage() {
                         </div>
                     </div>
 
-                    {/* Form Placeholder */}
-                    <div className="bg-neutral-900 p-8 rounded-2xl border border-white/10">
-                        <h2 className="font-heading text-3xl font-bold text-white mb-2">Request Assessment</h2>
-                        <p className="text-neutral-400 mb-8">Fill in your details and we&apos;ll call you back.</p>
-
-                        <ContactForm />
+                    {/* WhatsApp CTA */}
+                    <div className="bg-neutral-900 p-8 rounded-2xl border border-white/10 flex flex-col justify-center items-center text-center space-y-6">
+                        <MessageCircle className="w-20 h-20 text-green-500" />
+                        <div>
+                            <h2 className="font-heading text-3xl font-bold text-white mb-4">Chat with Us on WhatsApp</h2>
+                            <p className="text-neutral-400 mb-8 max-w-sm mx-auto">
+                                The fastest way to get a response. Send us a message on WhatsApp and we'll get back to you immediately to arrange your assessment and quote.
+                            </p>
+                        </div>
+                        <a 
+                            href="https://wa.me/27766300879" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full transition-all hover:scale-105"
+                        >
+                            <MessageCircle className="w-6 h-6" />
+                            Message on WhatsApp
+                        </a>
                     </div>
                 </div>
             </div>
