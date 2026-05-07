@@ -1,4 +1,4 @@
-import { BadgeCheck, Mail, MapPin, Phone, ShieldCheck, MessageCircle } from "lucide-react";
+import { BadgeCheck, Mail, MapPin, ShieldCheck, MessageCircle } from "lucide-react";
 
 export const metadata = {
     title: "Contact Us | The Maintenance Team",
@@ -100,7 +100,7 @@ export default function ContactPage() {
                         <div>
                             <h2 className="font-heading text-3xl font-bold text-white mb-4">Chat with Us on WhatsApp</h2>
                             <p className="text-neutral-400 mb-8 max-w-sm mx-auto">
-                                The fastest way to get a response. Send us a message on WhatsApp and we'll get back to you immediately to arrange your assessment and quote.
+                                The fastest way to get a response. Send us a message on WhatsApp and we&apos;ll get back to you immediately to arrange your assessment and quote.
                             </p>
                         </div>
                         <a 

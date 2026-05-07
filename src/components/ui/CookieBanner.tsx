@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 declare global {
     interface Window {
-        gtag?: (...args: any[]) => void;
+        gtag?: (...args: unknown[]) => void;
     }
 }
 
@@ -73,7 +73,7 @@ export const CookieBanner = () => {
                                     We value your privacy
                                 </h3>
                                 <p className="text-zinc-400 text-sm leading-relaxed max-w-2xl">
-                                    We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking <strong className="text-white">"Accept All"</strong>, you consent to our use of cookies in accordance with our policies.
+                                    We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking <strong className="text-white">&quot;Accept All&quot;</strong>, you consent to our use of cookies in accordance with our policies.
                                 </p>
                             </div>
                         </div>
