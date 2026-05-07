@@ -1,6 +1,12 @@
 import { TARGET_AREAS } from "@/data/areas";
 import { MapPin, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Service Areas | Cape Town Coverage",
+    description: "The Maintenance Team serves the Atlantic Seaboard, Northern Suburbs, Southern Suburbs, Winelands, and City Bowl areas of Cape Town.",
+};
 
 export default function AreasPage() {
     return (

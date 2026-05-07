@@ -2,6 +2,12 @@ import { SITE_DATA } from "@/lib/siteData";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Solutions | Residential, Commercial & Body Corporate",
+    description: "Tailored maintenance strategies for every property type. From private residences to large-scale industrial complexes across Cape Town.",
+};
 
 export default function SolutionsPage() {
     return (

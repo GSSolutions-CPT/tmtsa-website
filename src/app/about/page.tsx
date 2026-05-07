@@ -1,6 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle2, Star, ShieldCheck, Users } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "About Us | The Maintenance Team",
+    description: "Learn about Cape Town's trusted waterproofing & painting specialists. Over 10 years of experience serving residential, commercial, and body corporate clients.",
+};
 
 export default function AboutPage() {
     return (

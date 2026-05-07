@@ -4,20 +4,23 @@ import { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://www.themaintenanceteamsa.co.za';
 
-    // Static routes
+    // Static routes with appropriate priorities
     const routes = [
-        '',
-        '/about',
-        '/contact',
-        '/blog',
-        '/gallery',
-        '/faq',
-        '/quote',
-    ].map((route) => ({
-        url: `${baseUrl}${route}`,
+        { route: '', priority: 1.0 },
+        { route: '/services', priority: 0.9 },
+        { route: '/contact', priority: 0.9 },
+        { route: '/about', priority: 0.8 },
+        { route: '/solutions', priority: 0.8 },
+        { route: '/areas', priority: 0.8 },
+        { route: '/quote', priority: 0.7 },
+        { route: '/blog', priority: 0.7 },
+        { route: '/gallery', priority: 0.6 },
+        { route: '/faq', priority: 0.5 },
+    ].map((item) => ({
+        url: `${baseUrl}${item.route}`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
-        priority: 1,
+        priority: item.priority,
     }));
 
     // Services
@@ -33,24 +36,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${baseUrl}/solutions/${solution.slug}`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
-        priority: 0.8,
+        priority: 0.7,
     }));
 
-    // Areas
     // Areas
     const areas = SITE_DATA.areas.flatMap((area) => {
         const regionRoute = {
             url: `${baseUrl}/areas/${area.slug}`,
             lastModified: new Date(),
             changeFrequency: 'weekly' as const,
-            priority: 0.8,
+            priority: 0.7,
         };
 
         const suburbRoutes = area.locations.map((suburb) => ({
             url: `${baseUrl}/areas/${area.slug}/${suburb.toLowerCase().replace(/\s+/g, '-')}`,
             lastModified: new Date(),
             changeFrequency: 'weekly' as const,
-            priority: 0.7,
+            priority: 0.6,
         }));
 
         return [regionRoute, ...suburbRoutes];
@@ -58,3 +60,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return [...routes, ...services, ...solutions, ...areas];
 }
+

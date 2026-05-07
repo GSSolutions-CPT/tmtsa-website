@@ -1,6 +1,6 @@
 'use client';
 
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,7 +20,7 @@ export const Footer = () => {
                             />
                         </Link>
                         <p className="text-zinc-400 text-sm leading-relaxed max-w-sm">
-                            Cape Town&apos;s leading specialists in structural repairs, waterproofing, and industrial coating solutions. Protecting high-value assets since 2008.
+                            Cape Town&apos;s leading specialists in structural repairs, waterproofing, and industrial coating solutions. Trusted since 2015.
                         </p>
 
                         {/* Newsletter CTA */}
@@ -120,10 +120,19 @@ export const Footer = () => {
                             <li><Link href="/contact" className="hover:text-tmt-orange transition-colors">Contact</Link></li>
                             <li><Link href="/faq" className="hover:text-tmt-orange transition-colors">FAQs</Link></li>
                         </ul>
+
+                        <div className="space-y-3 mb-6">
+                            <a href="https://wa.me/27766300879" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-green-500 hover:text-green-400 text-sm font-bold transition-colors">
+                                WhatsApp: 076 630 0879
+                            </a>
+                            <a href="mailto:Info@TheMaintenanceTeamSA.co.za" className="text-zinc-400 hover:text-tmt-orange text-sm transition-colors">
+                                Info@TheMaintenanceTeamSA.co.za
+                            </a>
+                        </div>
+
                         <div className="flex gap-4">
-                            <Link href="#" className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:bg-tmt-orange hover:text-white transition-all" aria-label="Visit our Facebook page"><Facebook className="w-4 h-4" /></Link>
-                            <Link href="#" className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:bg-tmt-orange hover:text-white transition-all" aria-label="Visit our Instagram profile"><Instagram className="w-4 h-4" /></Link>
-                            <Link href="#" className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:bg-tmt-orange hover:text-white transition-all" aria-label="Visit our LinkedIn profile"><Linkedin className="w-4 h-4" /></Link>
+                            <Link href="https://www.facebook.com/TheMaintenanceTeamSA" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:bg-tmt-orange hover:text-white transition-all" aria-label="Visit our Facebook page"><Facebook className="w-4 h-4" /></Link>
+                            <Link href="https://www.instagram.com/the_maintenance_team" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:bg-tmt-orange hover:text-white transition-all" aria-label="Visit our Instagram profile"><Instagram className="w-4 h-4" /></Link>
                         </div>
                     </div>
                 </div>

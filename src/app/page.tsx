@@ -212,7 +212,7 @@ export default async function HomePage() {
                   <span className="text-3xl font-black">01</span>
                 </div>
                 <h4 className="font-heading font-bold text-2xl mb-4 group-hover:text-tmt-orange transition-colors">Request a Quote</h4>
-                <p className="text-neutral-400 leading-relaxed max-w-xs">Contact us via WhatsApp or our online form. We&apos;ll respond within 2 hours to schedule a site visit.</p>
+                <p className="text-neutral-400 leading-relaxed max-w-xs">Contact us via WhatsApp. We&apos;ll respond within 2 hours to schedule a site visit.</p>
               </div>
             </ScrollReveal>
 

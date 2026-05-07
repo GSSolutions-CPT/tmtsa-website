@@ -1,6 +1,5 @@
-"use client";
-
 import { PageHero } from "@/components/ui/PageHero";
+import { Metadata } from "next";
 // import { cn } from "@/lib/utils";
 import { ArrowRight, Wrench } from "lucide-react";
 import Link from "next/link";
@@ -49,6 +48,11 @@ const SERVICES = [
         image: "/images/services/hero-cleaning.png"
     }
 ];
+
+export const metadata: Metadata = {
+    title: "Our Services | Waterproofing, Painting & Renovations",
+    description: "Explore The Maintenance Team's full range of services including waterproofing, roof painting, structural repairs, plumbing, renovations, and high-pressure cleaning across Cape Town.",
+};
 
 export default function ServicesPage() {
     return (
