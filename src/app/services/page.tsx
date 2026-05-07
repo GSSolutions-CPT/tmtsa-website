@@ -1,8 +1,8 @@
 import { PageHero } from "@/components/ui/PageHero";
 import { Metadata } from "next";
-// import { cn } from "@/lib/utils";
 import { ArrowRight, Wrench } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const SERVICES = [
     {
@@ -87,11 +87,12 @@ export default function ServicesPage() {
                             {/* Image Header */}
                             <Link href={`/services/${service.slug}`} className="block h-64 overflow-hidden relative bg-neutral-100 cursor-pointer">
                                 {service.image ? (
-                                    // eslint-disable-next-line @next/next/no-img-element
-                                    <img
+                                    <Image
                                         src={service.image}
                                         alt={service.title}
-                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                        fill
+                                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     />
                                 ) : (
                                     <div className="w-full h-full flex items-center justify-center bg-tmt-dark">
