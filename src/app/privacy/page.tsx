@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
                     <ul className="list-disc pl-6 space-y-2">
                         <li><strong>Business Name:</strong> The Maintenance Team (TMT)</li>
                         <li><strong>Owner:</strong> Sage Seeley</li>
-                        <li><strong>Email:</strong> <a href="mailto:info@themaintenanceteamsa.co.za" className="text-tmt-orange hover:underline">info@themaintenanceteamsa.co.za</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:Info@TheMaintenanceTeamSA.co.za" className="text-tmt-orange hover:underline">Info@TheMaintenanceTeamSA.co.za</a></li>
                         <li><strong>WhatsApp:</strong> 076 630 0879</li>
                     </ul>
                 </section>
@@ -65,7 +65,7 @@ export default function PrivacyPolicy() {
                 <section className="mb-8">
                     <h2 className="text-2xl font-bold mb-4 font-heading text-neutral-900">7. POPIA Compliance (South Africa)</h2>
                     <p>
-                        We comply with the Protection of Personal Information Act (POPIA). You have the right to ask us to update, correct, or delete your personal information. To exercise these rights, please contact us at <a href="mailto:info@themaintenanceteamsa.co.za" className="text-tmt-orange hover:underline">info@themaintenanceteamsa.co.za</a>.
+                        We comply with the Protection of Personal Information Act (POPIA). You have the right to ask us to update, correct, or delete your personal information. To exercise these rights, please contact us at <a href="mailto:Info@TheMaintenanceTeamSA.co.za" className="text-tmt-orange hover:underline">Info@TheMaintenanceTeamSA.co.za</a>.
                     </p>
                 </section>
             </div>

@@ -26,28 +26,26 @@ export default function ContactPage() {
                             <div>
                                 <h3 className="font-bold text-lg mb-1">WhatsApp Line</h3>
                                 <a href="https://wa.me/27766300879" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-tmt-orange transition-colors">076 630 0879</a>
-                                <p className="text-sm text-neutral-500 mt-1">Strictly WhatsApp, no phone calls.</p>
+                                <p className="text-sm text-neutral-500 mt-1">Strictly WhatsApp, no phone calls</p>
                             </div>
                         </div>
 
                         <div className="flex items-start gap-4">
-                            <Phone className="w-6 h-6 text-tmt-orange shrink-0 mt-1" />
-                            <div>
-                                <h3 className="font-bold text-lg mb-1">Management Team</h3>
-                                <div className="space-y-4 mt-2">
-                                    <div>
-                                        <p className="font-semibold text-white">Sage Seeley <span className="font-normal text-neutral-400 text-sm">- CEO & Founder</span></p>
-                                        <div className="flex flex-col text-sm mt-1">
-                                            <a href="tel:+27791612160" className="hover:text-tmt-orange transition-colors">079 161 2160</a>
-                                            <a href="mailto:Sage@TheMaintenanceTeamSA.com" className="hover:text-tmt-orange transition-colors">Sage@TheMaintenanceTeamSA.com</a>
-                                        </div>
+                            <Mail className="w-6 h-6 text-tmt-orange shrink-0 mt-1" />
+                            <div className="w-full">
+                                <h3 className="font-bold text-lg mb-4">Leadership Team</h3>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div className="bg-neutral-800/50 p-4 rounded-lg">
+                                        <p className="font-bold text-white text-lg">Sage Seeley</p>
+                                        <p className="text-sm text-tmt-orange mb-2">CEO & Founder</p>
+                                        <a href="mailto:Sage@TheMaintenanceTeamSA.co.za" className="text-sm hover:text-white text-neutral-300 block mb-1">Sage@TheMaintenanceTeamSA.co.za</a>
+                                        <a href="tel:+27791612160" className="text-sm hover:text-white text-neutral-300 block">079 161 2160</a>
                                     </div>
-                                    <div>
-                                        <p className="font-semibold text-white">Levonde Roos <span className="font-normal text-neutral-400 text-sm">- COO</span></p>
-                                        <div className="flex flex-col text-sm mt-1">
-                                            <a href="tel:+27606727343" className="hover:text-tmt-orange transition-colors">060 672 7343</a>
-                                            <a href="mailto:Lavonde@TheMaintenanceTeamSA.com" className="hover:text-tmt-orange transition-colors">Lavonde@TheMaintenanceTeamSA.com</a>
-                                        </div>
+                                    <div className="bg-neutral-800/50 p-4 rounded-lg">
+                                        <p className="font-bold text-white text-lg">Levonde Roos</p>
+                                        <p className="text-sm text-tmt-orange mb-2">COO</p>
+                                        <a href="mailto:Lavonde@TheMaintenanceTeamSA.co.za" className="text-sm hover:text-white text-neutral-300 block mb-1">Lavonde@TheMaintenanceTeamSA.co.za</a>
+                                        <a href="tel:+27606727343" className="text-sm hover:text-white text-neutral-300 block">060 672 7343</a>
                                     </div>
                                 </div>
                             </div>
@@ -56,12 +54,12 @@ export default function ContactPage() {
                         <div className="flex items-start gap-4">
                             <Mail className="w-6 h-6 text-tmt-orange shrink-0 mt-1" />
                             <div>
-                                <h3 className="font-bold text-lg mb-1">Departments</h3>
-                                <div className="flex flex-col space-y-1 mt-2 text-sm">
-                                    <a href="mailto:Info@TheMaintenanceTeamSA.com" className="hover:text-tmt-orange transition-colors"><span className="text-neutral-400 inline-block w-20">General:</span> Info@TheMaintenanceTeamSA.com</a>
-                                    <a href="mailto:Admin@TheMaintenanceTeamSA.com" className="hover:text-tmt-orange transition-colors"><span className="text-neutral-400 inline-block w-20">Admin:</span> Admin@TheMaintenanceTeamSA.com</a>
-                                    <a href="mailto:Accounts@TheMaintenanceTeamSA.com" className="hover:text-tmt-orange transition-colors"><span className="text-neutral-400 inline-block w-20">Accounts:</span> Accounts@TheMaintenanceTeamSA.com</a>
-                                    <a href="mailto:Sales@TheMaintenanceTeamSA.com" className="hover:text-tmt-orange transition-colors"><span className="text-neutral-400 inline-block w-20">Sales:</span> Sales@TheMaintenanceTeamSA.com</a>
+                                <h3 className="font-bold text-lg mb-2">Departments</h3>
+                                <div className="space-y-2 text-sm text-neutral-300">
+                                    <a href="mailto:Admin@TheMaintenanceTeamSA.co.za" className="hover:text-tmt-orange block">Admin@TheMaintenanceTeamSA.co.za</a>
+                                    <a href="mailto:Info@TheMaintenanceTeamSA.co.za" className="hover:text-tmt-orange block">Info@TheMaintenanceTeamSA.co.za</a>
+                                    <a href="mailto:Accounts@TheMaintenanceTeamSA.co.za" className="hover:text-tmt-orange block">Accounts@TheMaintenanceTeamSA.co.za</a>
+                                    <a href="mailto:Sales@TheMaintenanceTeamSA.co.za" className="hover:text-tmt-orange block">Sales@TheMaintenanceTeamSA.co.za</a>
                                 </div>
                             </div>
                         </div>

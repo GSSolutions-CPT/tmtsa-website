@@ -138,8 +138,8 @@ export default function ServicesPage() {
                             Ready to <span className="text-tmt-orange">Start?</span>
                         </h3>
                         <div className="space-y-4 mb-8 font-sans text-neutral-300 relative z-10">
-                            <p>076 630 0879</p>
-                            <p className="text-sm">themaintenanceteam.oncall@gmail.com</p>
+                            <a href="https://wa.me/27766300879" target="_blank" rel="noopener noreferrer" className="block text-green-500 hover:text-green-400 font-bold transition-colors">WhatsApp: 076 630 0879</a>
+                            <a href="mailto:Info@TheMaintenanceTeamSA.co.za" className="block text-sm hover:text-tmt-orange transition-colors">Info@TheMaintenanceTeamSA.co.za</a>
                             <div className="flex justify-center gap-4 text-xs font-bold uppercase tracking-widest text-tmt-orange mt-4">
                                 <span>@The_Maintenance_Team</span>
                             </div>

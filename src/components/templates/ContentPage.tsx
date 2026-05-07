@@ -106,12 +106,12 @@ export const ContentPage = ({
 
                             <div className="mt-8 pt-8 border-t border-neutral-100">
                                 <h4 className="font-heading font-bold text-xl mb-4">Need Help?</h4>
-                                <p className="text-neutral-500 text-sm mb-4">Speak to a consultant directly.</p>
-                                <a href="tel:0766300879" className="text-2xl font-bold text-tmt-dark hover:text-tmt-orange transition-colors block">
+                                <p className="text-neutral-500 text-sm mb-4">Chat with us on WhatsApp directly.</p>
+                                <a href="https://wa.me/27766300879" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold text-green-600 hover:text-green-700 transition-colors block mb-2">
                                     076 630 0879
                                 </a>
-                                <a href="mailto:info@tmtsa.co.za" className="text-neutral-500 hover:text-tmt-orange transition-colors text-sm">
-                                    info@tmtsa.co.za
+                                <a href="mailto:Info@TheMaintenanceTeamSA.co.za" className="text-neutral-500 hover:text-tmt-orange transition-colors text-sm">
+                                    Info@TheMaintenanceTeamSA.co.za
                                 </a>
                             </div>
                         </div>

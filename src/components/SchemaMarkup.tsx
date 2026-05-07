@@ -14,7 +14,7 @@ export default function SchemaMarkup({
         "name": "The Maintenance Team",
         "image": "https://www.themaintenanceteamsa.co.za/images/tmt-logo-dark.png",
         "telephone": "076 630 0879",
-        "email": "info@themaintenanceteamsa.co.za",
+        "email": "Info@TheMaintenanceTeamSA.co.za",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Cape Town",

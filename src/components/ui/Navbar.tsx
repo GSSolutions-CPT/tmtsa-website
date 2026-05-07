@@ -252,8 +252,8 @@ export const Navbar = () => {
 
                 <div className="mt-12 pb-20 max-w-lg mx-auto w-full border-t border-zinc-100 pt-8">
                     <p className="text-zinc-400 text-sm mb-4">Contact Us</p>
-                    <p className="text-2xl font-bold text-zinc-900 mb-1">076 630 0879</p>
-                    <p className="text-zinc-500 font-medium">info@tmtsa.co.za</p>
+                    <a href="https://wa.me/27766300879" target="_blank" rel="noopener noreferrer" className="text-2xl font-bold text-green-600 mb-1 block hover:text-green-700">WhatsApp: 076 630 0879</a>
+                    <a href="mailto:Info@TheMaintenanceTeamSA.co.za" className="text-zinc-500 font-medium hover:text-tmt-orange">Info@TheMaintenanceTeamSA.co.za</a>
 
                     <div className="mt-8 flex gap-4">
                         <div className="h-10 w-10 bg-zinc-100 rounded-full flex items-center justify-center">

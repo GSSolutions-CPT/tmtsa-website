@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { ScrollReveal } from "./ScrollReveal";
 
@@ -45,11 +45,13 @@ export const CTABanner = () => {
                             </Link>
 
                             <a
-                                href="tel:+27766300879"
+                                href="https://wa.me/27766300879"
+                                target="_blank" 
+                                rel="noopener noreferrer"
                                 className="group flex items-center gap-3 px-8 py-5 border border-white/20 text-white font-bold text-lg uppercase tracking-wider hover:bg-white/10 transition-all backdrop-blur-sm rounded-xl duration-300 hover:-translate-y-1"
                             >
-                                <Phone className="w-5 h-5 text-tmt-orange" />
-                                076 630 0879
+                                <MessageCircle className="w-5 h-5 text-green-500" />
+                                WhatsApp Us
                             </a>
                         </div>
                     </div>
