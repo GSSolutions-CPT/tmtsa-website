@@ -58,7 +58,6 @@ export default function ContactPage() {
                                 <div className="space-y-2 text-sm text-neutral-300">
                                     <a href="mailto:Admin@TheMaintenanceTeamSA.co.za" className="hover:text-tmt-orange block">Admin@TheMaintenanceTeamSA.co.za</a>
                                     <a href="mailto:Info@TheMaintenanceTeamSA.co.za" className="hover:text-tmt-orange block">Info@TheMaintenanceTeamSA.co.za</a>
-                                    <a href="mailto:Accounts@TheMaintenanceTeamSA.co.za" className="hover:text-tmt-orange block">Accounts@TheMaintenanceTeamSA.co.za</a>
                                     <a href="mailto:Sales@TheMaintenanceTeamSA.co.za" className="hover:text-tmt-orange block">Sales@TheMaintenanceTeamSA.co.za</a>
                                 </div>
                             </div>

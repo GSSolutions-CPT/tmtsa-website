@@ -9,7 +9,6 @@ export async function POST(req: Request) {
     const ADMIN_EMAILS = [
         'Admin@TheMaintenanceTeamSA.co.za',
         'Info@TheMaintenanceTeamSA.co.za',
-        'Accounts@TheMaintenanceTeamSA.co.za',
         'Sales@TheMaintenanceTeamSA.co.za',
         'Sage@TheMaintenanceTeamSA.co.za',
         'Lavonde@TheMaintenanceTeamSA.co.za'
